@@ -10,6 +10,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+            bool startgame = false;
             while (true)
             {
                 try
@@ -19,11 +20,13 @@ namespace ConsoleApp1
                     if ((Convert.ToInt32(answer) == 1))
                     {
                         Console.WriteLine("Lets go!");
+                        startgame = true;
                         break;
                     }
                     if ((Convert.ToInt32(answer) == 2))
                     {
                         Console.WriteLine("Ohh... Good bye D:");
+                        startgame = false;
                         break;
                     }
                     else
@@ -40,7 +43,18 @@ namespace ConsoleApp1
                     Console.WriteLine("Invalid Answer! Try again!");
                 }
             }
-            
+            if (startgame == false)
+            {
+
+            }
+            else
+            {
+                bool gameOver = false;
+                while (gameOver == false)
+                {
+                    Console.WriteLine("You find yourself in a dark dank cave!");
+                }
+            }
         }
     }
 }
